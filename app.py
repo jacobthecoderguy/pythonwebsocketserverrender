@@ -10,6 +10,8 @@ import websockets
 async def echo(websocket):
     async for message in websocket:
         await websocket.send(message)
+        await websocket.send(message)
+        await websocket.send(message)
 
 
 async def health_check(path, request_headers):
